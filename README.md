@@ -53,6 +53,8 @@ Examples<br>
 - Install the kafka-python library locally.
 - Consume data from the same Kafka topic (“crypto-data-topic”) to receive the streaming data.
 ### 9) Running the Demo:
+- start zookeeper on Azure VM
+- start Kafka broker on Azure VM
 - Start the Kafka producer script on Azure VM.
 - Observe the data being published to the Kafka topic.
 - Run the Kafka consumer script on local machine to consume the data.
