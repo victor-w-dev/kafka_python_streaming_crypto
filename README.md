@@ -32,7 +32,7 @@ A demo to demonstrate how to set up a remote Kafka-based data streaming pipeline
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_config.PNG" width="45%" height="45%"><br>
 - Connect the VM<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_vm_connect.PNG" width="45%" height="45%"><br>
-- After successful connection, can manipulate files in VS code Explorer
+- After successful connection, can manipulate files in VS code Explorer<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_connected_explorer.PNG" width="45%" height="45%"><br>
 ### 5) Kafka-Python Installation
 - In the VM, install the kafka-python library using pip:
