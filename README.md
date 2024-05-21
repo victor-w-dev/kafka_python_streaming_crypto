@@ -24,14 +24,15 @@ A demo to demonstrate how to set up a remote Kafka-based data streaming pipeline
 - Open VS Code on local machine.
 - Install the “Remote - SSH” extension.<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_extension_ssh.PNG" width="45%" height="45%"><br>
-- Use the SSH configuration (Host: VM name, User name, HostName: VM IP address, IdentityFile: public key location) to connect the Azure VM from VS Code.<br>
+- Use the SSH configuration to connect the Azure VM from VS Code.<br>
   - Press F1 to search "Remote-SSH: Open SSH Configuration File..."<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_search_box.PNG" width="45%" height="45%"><br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_config_location.PNG" width="45%" height="45%"><br>
-  - Edit SSH configuration (Host: VM name, User name, HostName: VM IP address, IdentityFile: public key location)
+  - Edit SSH configuration (can get information from Azure VM Overview Page for Host: VM name, User name, HostName: VM IP address, IdentityFile: Public Key location)
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_config.PNG" width="45%" height="45%"><br>
 - Connect the VM<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_vm_connect.PNG" width="45%" height="45%"><br>
+- After successful connection, can manipulate files in VS code Explorer
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_connected_explorer.PNG" width="45%" height="45%"><br>
 ### 5) Kafka-Python Installation
 - In the VM, install the kafka-python library using pip:
