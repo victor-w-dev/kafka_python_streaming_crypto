@@ -42,7 +42,7 @@ A demo to demonstrate how to set up a remote Kafka-based data streaming pipeline
 Examples 
 `1. advertised.listeners=PLAINTEXT://176.11.12.1:9092`
 `1. advertised.listeners=PLAINTEXT://hostname:9092`
-- Here, just a single broker to demo
+- Here, just a single broker to demo<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/6_server_properties.PNG" width="45%" height="45%"><br>
 ### 7) Bybit API Data Collection Script
 - Write a Python script that interacts with the Bybit API to retrieve crypto data.
