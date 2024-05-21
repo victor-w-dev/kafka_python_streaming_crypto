@@ -37,17 +37,17 @@ A demo to demonstrate how to set up a remote Kafka-based data streaming pipeline
 ### 5) Kafka-Python Installation
 - Wuth connection with VM, install the kafka-python library using pip via VS code terminal:
 - ```pip install kafka-python```
-### 6) Configuration in server.properties for the remote Kafka broker:
-- In the configuration file for each **broker**, need to adjust  `advertised.listeners` and set it either to **DNS name** or **public IP address** of the server where broker is hosted.<br>
+### 6) Configuration in server.properties in the remote Kafka broker so that local computer consumer can connect from it:
+- In the configuration file for each **broker**, need to adjust `advertised.listeners` and set it either to **DNS name** or **public IP address** of the server where broker is hosted.<br>
 Examples<br>
-```advertised.listeners=PLAINTEXT://176.11.12.1:9092```<br>
 ```advertised.listeners=PLAINTEXT://hostname:9092```<br>
+```advertised.listeners=PLAINTEXT://176.11.12.1:9092```<br>
 - Here, just a single broker to demo<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/6_server_properties.PNG" width="45%" height="45%"><br>
-### 7) Bybit API Data Collection Script
+### 7) Remote kafka-python producer Setup: Bybit API Data Collection Script
+- Make sure python package pybit (Bybit API) installed
 - Write a Python script that interacts with the Bybit API to retrieve crypto data.
 - This script will act as Kafka producer, publishing crypto data to a Kafka topic.
-
 ### 8) Local Consumer Setup:
 - On the local computer, set up a Kafka consumer.
 - Install the kafka-python library locally.
