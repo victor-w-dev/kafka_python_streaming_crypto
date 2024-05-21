@@ -3,7 +3,7 @@ A demo to demonstrate how to set up a remote Kafka-based data streaming pipeline
 ### 1) Setting up a remote Kafka Linux server
 - Create an Azure Virtual Machine (VM) with Ubuntu Linux.
   - Use Linux (ubuntu 22.04) and Standard B2s (2 vcpus, 4 GiB memory)
-  <img src="" width="60%" height="60%"><br>
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/1_VM.PNG" width="60%" height="60%"><br>
   - Connect from local machine (Windows) PowerShell using SSH private key file provided by Azure
   <img src="" width="60%" height="60%"><br>
   <img src="" width="60%" height="60%"><br>
