@@ -30,6 +30,8 @@ A demo to demonstrate how to set up a remote Kafka-based data streaming pipeline
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_config_location.PNG" width="45%" height="45%"><br>
   - Edit SSH configuration (Host: VM name, User name, HostName: VM IP address, IdentityFile: public key location)
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_config.PNG" width="45%" height="45%"><br>
+- Connect the VM<br>
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_vm_connect.PNG" width="45%" height="45%"><br>
 ### 5) Kafka-Python Installation
 - In the VM, install the kafka-python library using pip:
 - ```pip install kafka-python```
