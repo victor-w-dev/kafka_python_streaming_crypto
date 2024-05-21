@@ -3,20 +3,23 @@ A demo to demonstrate how to set up a remote Kafka-based data streaming pipeline
 ### 1) Setting up a remote Kafka Linux server
 - Create an Azure Virtual Machine (VM) with Ubuntu Linux.
   - Use Linux (ubuntu 22.04) and Standard B2s (2 vcpus, 4 GiB memory)
-  <img src="" width="60%" height="60%"><br>
-  - Connect from local machine (Windows) PowerShell using SSH private key file provided by Azure
-  <img src="" width="60%" height="60%"><br>
-  <img src="" width="60%" height="60%"><br>
-- Install Kafka on the VM.
-  - Update the package in Linux
-  - Install Java Development Kit <br>
-  <img src="" width="60%" height="60%"><br>
-### 2) SSH Key Setup
-- Generate an SSH key (public key) using PuTTY.
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/1_VM.PNG" width="60%" height="60%"><br>
+- Connect from local machine (Windows) PowerShell using SSH Private Key file provided by Azure
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/1_access_vm.png" width="60%" height="60%"><br>
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/1_powershell.png" width="60%" height="60%"><br>
+### 2)Install Kafka on the VM.
+- Update the package in Linux and install Java Development Kit <br>
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/1_install_java.PNG" width="60%" height="60%"><br>
+- Download Kafka <br>
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/1_download_kafka.PNG" width="60%" height="60%"><br>
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/1_unzip_kafka.PNG" width="60%" height="60%"><br>
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/1_install_kafka_completed.PNG" width="60%" height="60%"><br>
+### 3) SSH Public Key Setup
+- Generate an SSH key (Public key) using PuTTY.
   - [PuTTY MSI (‘Windows Installer’)](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
-  - Open the PuTTY Key Generator to load the private key<br>
+  - Open the PuTTY Key Generator to load the Private Key<br>
   <img src="" width="45%" height="45%"><br>
-  - Conversion -> Export OpenSSH Key -> Save this public key somewhere
+  - Conversion -> Export OpenSSH Key -> Save this Public Key somewhere
 ### 3) Accessing the VM via Visual Studio Code (VS Code)
 - Open VS Code on local machine.
 - Install the “Remote - SSH” extension.<br>
