@@ -24,7 +24,7 @@ A demo to demonstrate how to set up a remote Kafka-based data streaming pipeline
   - [PuTTY MSI (‘Windows Installer’)](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
   - Open the PuTTY Key Generator to load the Private Key<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/3_putty_ssh.PNG" width="60%" height="60%"><br>
-  - Conversion -> Export OpenSSH Key -> Save this Public Key somewhere
+  - Conversion -> Export OpenSSH Key -> Then can save the Public Key somewhere
 ### 4) Accessing the VM via Visual Studio Code (VS Code)
 - Open VS Code on local machine.
 - Install the “Remote - SSH” extension.<br>
