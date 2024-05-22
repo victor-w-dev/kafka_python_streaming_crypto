@@ -39,20 +39,20 @@ A demo to demonstrate how to set up a remote Kafka-based data streaming pipeline
 - After successful connection, can manipulate files in VS code Explorer<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_connected_explorer.PNG" width="60%" height="60%"><br>
 ### 5) Install Python and kafka-python package via VS code terminal:
-```sudo apt install python3```
-```pip install kafka-python```
+```sudo apt install python3```<br>
+```pip install kafka-python```<br>
 ### 6) Configuration in server.properties in the remote Kafka broker so that local computer consumer can connect from it
 - In the configuration file for each **broker**, need to adjust `advertised.listeners` and set it either to **DNS name** or **public IP address** of the server where broker is hosted.<br>
 Examples<br>
 ```advertised.listeners=PLAINTEXT://hostname:9092```<br>
 ```advertised.listeners=PLAINTEXT://176.11.12.1:9092```<br>
 - Here, just a single broker to demo<br>
-  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/6_server_properties.PNG" width="60%" height="60%"><br>
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/6_server_properties.PNG" width="75%" height="75%"><br>
 ### 7) Set up Inbound Port Rule in remote VM Network settings
 - Allow local consumer to interact with remote VM Kafka broker (single broker default port: 9092), consuming the crypto data
 - Make sure to include both the local consumer IP and this Azure VM IP for Source IP addresses in the Inbound Port Rule<br>
-  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/7_inbound_rule.PNG" width="60%" height="60%"><br>
-  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/7_inbound_rule_set_source_ip.PNG" width="60%" height="60%"><br>
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/7_inbound_rule.PNG" width="75%" height="75%"><br>
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/7_inbound_rule_set_source_ip.PNG" width="75%" height="75%"><br>
 ### 8) Remote kafka-python producer Setup
 - Make sure Python package pybit (Bybit API) installed
 - Write a Python script that interacts with the Bybit API to retrieve crypto data.
@@ -65,9 +65,9 @@ Examples<br>
 [consumer.py](https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/consumer.py)<br>
 ### 10) Running the Demo
 - start zookeeper first, then Kafka broker on Azure VM<br>
-  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/10_start_zookeeper_kafka_server.PNG" width="60%" height="60%"><br>
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/10_start_zookeeper_kafka_server.PNG" width="75%" height="75%"><br>
 - Start the Kafka producer script on Azure VM
 - Observe the data being published to the Kafka topic.<br>
-  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/10_run_producer.PNG" width="60%" height="60%"><br>
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/10_run_producer.PNG" width="75%" height="75%"><br>
 - Run the Kafka consumer script on local machine to consume the data.<br>
-  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/10_run_consumer.PNG" width="60%" height="60%"><br>
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/10_run_consumer.PNG" width="75%" height="75%"><br>
