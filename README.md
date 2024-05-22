@@ -3,36 +3,36 @@ A demo to demonstrate how to set up a remote Kafka-based data streaming pipeline
 ### 1) Setting up a remote Kafka Linux server
 - Create an Azure Virtual Machine (VM) with Ubuntu Linux.<br>
   Use Linux (ubuntu 22.04) and Standard B2s (2 vcpus, 4 GiB memory)<br>
-  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/1_VM.PNG" width="70%" height="70%"><br>
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/1_VM.PNG" width="75%" height="75%"><br>
 - Connect from local machine (Windows) PowerShell using SSH Private Key file provided by Azure
-  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/1_access_vm.png" width="70%" height="70%"><br>
-  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/1_powershell.png" width="70%" height="70%"><br>
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/1_access_vm.png" width="75%" height="75%"><br>
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/1_powershell.png" width="75%" height="75%"><br>
 ### 2) Install Kafka on the VM
 - Update the package in Linux and install Java Development Kit <br>
-  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/2_install_java.PNG" width="60%" height="60%"><br>
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/2_install_java.PNG" width="75%" height="75%"><br>
 - Download Kafka <br>
-  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/2_download_kafka.PNG" width="60%" height="60%"><br>
-  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/2_unzip_kafka.PNG" width="60%" height="60%"><br>
-  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/2_install_kafka_completed.PNG" width="60%" height="60%"><br>
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/2_download_kafka.PNG" width="75%" height="75%"><br>
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/2_unzip_kafka.PNG" width="75%" height="75%"><br>
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/2_install_kafka_completed.PNG" width="75%" height="75%"><br>
 ### 3) SSH Public Key Setup
 - Generate an SSH key (Public key) using PuTTY.
   - [PuTTY MSI (‘Windows Installer’)](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
   - Open the PuTTY Key Generator to load the Private Key<br>
-  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/3_putty_ssh.PNG" width="45%" height="45%"><br>
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/3_putty_ssh.PNG" width="60%" height="60%"><br>
   - Conversion -> Export OpenSSH Key -> Save this Public Key somewhere
 ### 4) Accessing the VM via Visual Studio Code (VS Code)
 - Open VS Code on local machine.
 - Install the “Remote - SSH” extension.<br>
-  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_extension_ssh.PNG" width="45%" height="45%"><br>
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_extension_ssh.PNG" width="60%" height="60%"><br>
 - Use the SSH configuration to connect the Azure VM from VS Code.<br>
   - Press F1 to search "Remote-SSH: Open SSH Configuration File..."<br>
-  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_search_box.PNG" width="45%" height="45%"><br>
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_search_box.PNG" width="60%" height="60%"><br>
   - Edit SSH configuration (can get information from Azure VM Overview Page for Host: VM name, User name, HostName: VM IP address, IdentityFile: Public Key location)<br>
-  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_config.PNG" width="45%" height="45%"><br>
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_config.PNG" width="60%" height="60%"><br>
 - Connect the VM<br>
-  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_vm_connect.PNG" width="45%" height="45%"><br>
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_vm_connect.PNG" width="60%" height="60%"><br>
 - After successful connection, can manipulate files in VS code Explorer<br>
-  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_connected_explorer.PNG" width="45%" height="45%"><br>
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_connected_explorer.PNG" width="60%" height="60%"><br>
 ### 5) kafka-python Installation
 - Wuth connection with VM, install the kafka-python library using pip via VS code terminal:
 - ```pip install kafka-python```
@@ -42,12 +42,12 @@ Examples<br>
 ```advertised.listeners=PLAINTEXT://hostname:9092```<br>
 ```advertised.listeners=PLAINTEXT://176.11.12.1:9092```<br>
 - Here, just a single broker to demo<br>
-  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/6_server_properties.PNG" width="45%" height="45%"><br>
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/6_server_properties.PNG" width="60%" height="60%"><br>
 ### 7) Set up Inbound Port Rule in remote VM Network settings
 - Allow local consumer to interact with remote VM Kafka broker (single broker default port: 9092), consuming the crypto data
 - Make sure to include both the local consumer IP and this Azure VM IP for Source IP addresses in the Inbound Port Rule<br>
-  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/7_inbound_rule.PNG" width="45%" height="45%"><br>
-  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/7_inbound_rule_set_source_ip.PNG" width="45%" height="45%"><br>
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/7_inbound_rule.PNG" width="60%" height="60%"><br>
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/7_inbound_rule_set_source_ip.PNG" width="60%" height="60%"><br>
 ### 8) Remote kafka-python producer Setup
 - Make sure Python package pybit (Bybit API) installed
 - Write a Python script that interacts with the Bybit API to retrieve crypto data.
@@ -60,9 +60,9 @@ Examples<br>
 [consumer.py](https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/consumer.py)<br>
 ### 10) Running the Demo
 - start zookeeper first, then Kafka broker on Azure VM<br>
-  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/10_start_zookeeper_kafka_server.PNG" width="45%" height="45%"><br>
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/10_start_zookeeper_kafka_server.PNG" width="60%" height="60%"><br>
 - Start the Kafka producer script on Azure VM
 - Observe the data being published to the Kafka topic.<br>
-  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/10_run_producer.PNG" width="45%" height="45%"><br>
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/10_run_producer.PNG" width="60%" height="60%"><br>
 - Run the Kafka consumer script on local machine to consume the data.<br>
-  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/10_run_consumer.PNG" width="45%" height="45%"><br>
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/10_run_consumer.PNG" width="60%" height="60%"><br>
