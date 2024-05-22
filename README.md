@@ -38,9 +38,9 @@ A demo to demonstrate how to set up a remote Kafka-based data streaming pipeline
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_vm_connect.PNG" width="60%" height="60%"><br>
 - After successful connection, can manipulate files in VS code Explorer<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_connected_explorer.PNG" width="60%" height="60%"><br>
-### 5) kafka-python Installation
-- Wuth connection with VM, install the kafka-python library using pip via VS code terminal:
-- ```pip install kafka-python```
+### 5) Install Python and kafka-python package via VS code terminal:
+```sudo apt install python3```
+```pip install kafka-python```
 ### 6) Configuration in server.properties in the remote Kafka broker so that local computer consumer can connect from it
 - In the configuration file for each **broker**, need to adjust `advertised.listeners` and set it either to **DNS name** or **public IP address** of the server where broker is hosted.<br>
 Examples<br>
