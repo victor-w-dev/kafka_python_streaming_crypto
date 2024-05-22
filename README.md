@@ -1,5 +1,5 @@
 # kafka_streaming_crypto
-A demo to demonstrate how to set up a remote Kafka-based data streaming pipeline for collecting and processing cryptocurrency data using Python
+A demo to demonstrate how to set up a remote Kafka-based data streaming pipeline for collecting and processing cryptocurrency data using Python from Bybit API
 ### 1) Setting up a remote Kafka Linux server
 - Create an Azure Virtual Machine (VM) with Ubuntu Linux.<br>
   Use Linux (ubuntu 22.04) and Standard B2s (2 vcpus, 4 GiB memory)<br>
