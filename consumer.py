@@ -1,7 +1,6 @@
 from kafka import KafkaConsumer
 import pandas as pd
 import json
-from datetime import datetime
 
 kafka_server_ip = '' #input kafka server ip here or use logging dotenv
 
