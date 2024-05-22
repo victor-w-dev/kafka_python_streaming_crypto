@@ -12,7 +12,7 @@ A demo to demonstrate how to set up a remote Kafka-based data streaming pipeline
 ```sudo apt-get update```<br>
 ```sudo apt install openjdk-11-jdk```<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/2_install_java.PNG" width="75%" height="75%"><br>
-- Download Kafka 2.4.0<br>
+- Download and Install Kafka 2.4.0<br>
 ```mkdir Downloads```<br>
 ```curl https://archive.apache.org/dist/kafka/2.4.0/kafka_2.13-2.4.0.tgz -o Downloads/kafka.tgz```<br>
 ```tar -xvzf ~/Downloads/kafka.tgz --strip 1```<br>
