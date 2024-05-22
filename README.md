@@ -1,7 +1,7 @@
 # kafka_streaming_crypto
-A demo to demonstrate how to set up a remote Kafka-based data streaming workflow for collecting and processing cryptocurrency data (e.g. Bitcoin USDT perpetual contract data) using Python kafka-python package from Bybit API.
-A Kafka producer collects the data and publishes to the Kafka Broker in the same remote Azure VM with a topic (e.g. 'BTCUSDT-1min').
-A consumer in local computer receive the data and then can have further transformation for trigger a trading strategy.
+- A demo to demonstrate how to set up a remote Kafka-based data streaming workflow for collecting and processing cryptocurrency data (e.g. Bitcoin USDT perpetual contract data) using Python kafka-python package from Bybit API.
+- A Kafka producer collects the data and publishes to the Kafka Broker in the same remote Azure VM with a topic (e.g. 'BTCUSDT-1min').
+- A consumer in local computer receive the data and then can have further transformation for trigger a trading strategy.
 <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/flow_chart.PNG" width="100%" height="100%"><br>
 
 ### 1) Setting up a remote Kafka Linux server
