@@ -34,7 +34,7 @@ A demo to demonstrate how to set up a remote Kafka-based data streaming pipeline
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_vm_connect.PNG" width="45%" height="45%"><br>
 - After successful connection, can manipulate files in VS code Explorer<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_connected_explorer.PNG" width="45%" height="45%"><br>
-### 5) Kafka-Python Installation
+### 5) kafka-python Installation
 - Wuth connection with VM, install the kafka-python library using pip via VS code terminal:
 - ```pip install kafka-python```
 ### 6) Configuration in server.properties in the remote Kafka broker so that local computer consumer can connect from it:
@@ -44,13 +44,13 @@ Examples<br>
 ```advertised.listeners=PLAINTEXT://176.11.12.1:9092```<br>
 - Here, just a single broker to demo<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/6_server_properties.PNG" width="45%" height="45%"><br>
-### 7) Remote kafka-python producer Setup: Bybit API Data Collection Script
-- Make sure python package pybit (Bybit API) installed
+### 7) Remote kafka-python producer Setup:
+- Make sure Python package pybit (Bybit API) installed
 - Write a Python script that interacts with the Bybit API to retrieve crypto data.
 - This script will act as Kafka producer, publishing crypto data to a Kafka topic.
 ### 8) Local Consumer Setup:
-- On the local computer, set up a Kafka consumer.
 - Install the kafka-python library locally.
+- On the local computer, set up a Kafka consumer.
 - Consume data from the same Kafka topic (“crypto-data-topic”) to receive the streaming data.
 ### 9) Running the Demo:
 - start zookeeper on Azure VM
