@@ -45,7 +45,7 @@ Examples<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/6_server_properties.PNG" width="45%" height="45%"><br>
 ### 7) Set up Inbound Port Rule in remote VM Network settings
 - Allow local consumer to interact with remote VM Kafka broker (single broker default port: 9092), consuming the crypto data
-- Make sure to include both the local consumer IP and this Azure VM IP for Source IP addresses in the Inbound Port Rule
+- Make sure to include both the local consumer IP and this Azure VM IP for Source IP addresses in the Inbound Port Rule<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/7_inbound_rule.PNG" width="45%" height="45%"><br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/7_inbound_rule_set_source_ip.PNG" width="45%" height="45%"><br>
 ### 8) Remote kafka-python producer Setup
@@ -61,8 +61,8 @@ Examples<br>
 ### 10) Running the Demo
 - start zookeeper first, then Kafka broker on Azure VM<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/10_start_zookeeper_kafka_server.PNG" width="45%" height="45%"><br>
-- Start the Kafka producer script on Azure VM.
+- Start the Kafka producer script on Azure VM
 - Observe the data being published to the Kafka topic.<br>
-  <img src="" width="45%" height="45%"><br>
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/10_run_producer.PNG" width="45%" height="45%"><br>
 - Run the Kafka consumer script on local machine to consume the data.<br>
-  <img src="" width="45%" height="45%"><br>
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/10_run_consumer.PNG" width="45%" height="45%"><br>
