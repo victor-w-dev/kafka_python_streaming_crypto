@@ -73,5 +73,5 @@ Examples<br>
 - Start the Kafka producer script on Azure VM
 - Observe the data being published to the Kafka topic.<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/10_run_producer.PNG" width="75%" height="75%"><br>
-- Run the Kafka consumer script on local machine to consume the data.<br>
+- Run the Kafka consumer script on local machine to consume the data, using Spyder as IDE.<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/10_run_consumer.PNG" width="75%" height="75%"><br>
