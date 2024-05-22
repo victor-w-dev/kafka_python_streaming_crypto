@@ -1,5 +1,5 @@
 # kafka_streaming_crypto
-A demo to demonstrate how to set up a remote Kafka-based data streaming pipeline for collecting and processing cryptocurrency data using Python from Bybit API
+A demo to demonstrate how to set up a remote Kafka-based data streaming for collecting and processing cryptocurrency data (e.g. Bitcoin USDT perpetual contract data) using Python from Bybit API
 <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/flow_chart.PNG" width="100%" height="100%"><br>
 
 ### 1) Setting up a remote Kafka Linux server
