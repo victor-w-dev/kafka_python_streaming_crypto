@@ -45,7 +45,7 @@ Examples<br>
 - Here, just a single broker to demo<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/6_server_properties.PNG" width="45%" height="45%"><br>
 ### 7) Set up Inbound Port Rule in remote VM Network settings
-- Allow local consumer to interact with remote VM Kafka broker(single broker default port: 9092, consuming the crypto data
+- Allow local consumer to interact with remote VM Kafka broker (single broker default port: 9092), consuming the crypto data
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/7_inbound_rule.PNG" width="45%" height="45%"><br>
 ### 8) Remote kafka-python producer Setup
 - Make sure Python package pybit (Bybit API) installed
@@ -56,8 +56,8 @@ Examples<br>
 - On the local computer, set up a Kafka consumer.
 - Consume data from the same Kafka topic (“crypto-data-topic”) to receive the streaming data.
 ### 10) Running the Demo
-- start zookeeper on Azure VM
-- start Kafka broker on Azure VM
+- start zookeeper first, then Kafka broker on Azure VM
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/10_start_zookeeper_kafka_server.PNG" width="45%" height="45%"><br>
 - Start the Kafka producer script on Azure VM.
 - Observe the data being published to the Kafka topic.
 - Run the Kafka consumer script on local machine to consume the data.
