@@ -27,8 +27,7 @@ A demo to demonstrate how to set up a remote Kafka-based data streaming pipeline
 - Use the SSH configuration to connect the Azure VM from VS Code.<br>
   - Press F1 to search "Remote-SSH: Open SSH Configuration File..."<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_search_box.PNG" width="45%" height="45%"><br>
-  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_config_location.PNG" width="45%" height="45%"><br>
-  - Edit SSH configuration (can get information from Azure VM Overview Page for Host: VM name, User name, HostName: VM IP address, IdentityFile: Public Key location)
+  - Edit SSH configuration (can get information from Azure VM Overview Page for Host: VM name, User name, HostName: VM IP address, IdentityFile: Public Key location)<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_config.PNG" width="45%" height="45%"><br>
 - Connect the VM<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_vm_connect.PNG" width="45%" height="45%"><br>
@@ -52,11 +51,13 @@ Examples<br>
 ### 8) Remote kafka-python producer Setup
 - Make sure Python package pybit (Bybit API) installed
 - Write a Python script that interacts with the Bybit API to retrieve crypto data.
-- This script will act as Kafka producer, publishing crypto data to a Kafka topic.
+- This script will act as Kafka producer, publishing crypto data to a Kafka topic.<br>
+[producer_kline.py](https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/producer_kline.py)<br>
 ### 9) Local Consumer Setup
 - Install the kafka-python library locally.
 - On the local computer, set up a Kafka consumer.
-- Consume data from the same Kafka topic (“crypto-data-topic”) to receive the streaming data.
+- Consume data from the same Kafka topic (“crypto-data-topic”) to receive the streaming data.<br>
+[consumer.py](https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/consumer.py)<br>
 ### 10) Running the Demo
 - start zookeeper first, then Kafka broker on Azure VM<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/10_start_zookeeper_kafka_server.PNG" width="45%" height="45%"><br>
