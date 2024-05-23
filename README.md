@@ -25,7 +25,7 @@ Table of contents
      * [Public](#public)
 <!--te-->
 
-### 1) Setting up a remote Kafka Linux server
+Setting up a remote Kafka Linux server
 - Create an Azure Virtual Machine (VM) with Ubuntu Linux.<br>
   Use Linux (ubuntu 22.04) and Standard B2s (2 vcpus, 4 GiB memory)<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/1_VM.PNG" width="75%" height="75%"><br>
