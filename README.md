@@ -4,6 +4,27 @@
 - A consumer in local computer receives the data and then can have further transformation for triggering a trading strategy.
 <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/flow_chart.PNG" width="100%" height="100%"><br>
 
+Table of contents
+=================
+
+<!--ts-->
+   * [Installation](#1) Setting up a remote Kafka Linux server)
+   * [Usage](#usage)
+      * [STDIN](#stdin)
+      * [Local files](#local-files)
+      * [Remote files](#remote-files)
+      * [Multiple files](#multiple-files)
+      * [Combo](#combo)
+      * [Auto insert and update TOC](#auto-insert-and-update-toc)
+      * [GitHub token](#github-token)
+      * [TOC generation with Github Actions](#toc-generation-with-github-actions)
+   * [Tests](#tests)
+   * [Dependency](#dependency)
+   * [Docker](#docker)
+     * [Local](#local)
+     * [Public](#public)
+<!--te-->
+
 ### 1) Setting up a remote Kafka Linux server
 - Create an Azure Virtual Machine (VM) with Ubuntu Linux.<br>
   Use Linux (ubuntu 22.04) and Standard B2s (2 vcpus, 4 GiB memory)<br>
