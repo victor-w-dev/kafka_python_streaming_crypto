@@ -1,7 +1,7 @@
 # kafka_python_streaming_crypto
-- A demo to demonstrate how to set up a remote Kafka-based data streaming workflow for collecting and processing cryptocurrency data (e.g. Bitcoin USDT perpetual contract data) using Python kafka-python package from Bybit API.
+- A demo to demonstrate how to set up a remote Kafka-based data streaming workflow for collecting and processing cryptocurrency data (e.g. Bitcoin USDT perpetual contract data) using Python kafka-python package and Bybit API.
 - A Kafka producer collects the data and publishes to the Kafka Broker in the same remote Azure VM with a topic (e.g. 'BTCUSDT-1min').
-- A consumer in local computer receives the data and then can have further transformation for trigger a trading strategy.
+- A consumer in local computer receives the data and then can have further transformation for triggering a trading strategy.
 <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/flow_chart.PNG" width="100%" height="100%"><br>
 
 ### 1) Setting up a remote Kafka Linux server
@@ -12,13 +12,15 @@
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/1_access_vm.png" width="75%" height="75%"><br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/1_powershell.png" width="75%" height="75%"><br>
 ### 2) Install Kafka on the VM
-- Update the package in Linux and install Java Development Kit <br>
+- Update the package in Linux and install Java Development Kit OpenJDK 11<br>
 ```sudo apt-get update```<br>
 ```sudo apt install openjdk-11-jdk```<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/2_install_java.PNG" width="75%" height="75%"><br>
 - Download and Install Kafka 2.4.0<br>
 ```mkdir Downloads```<br>
 ```curl https://archive.apache.org/dist/kafka/2.4.0/kafka_2.13-2.4.0.tgz -o Downloads/kafka.tgz```<br>
+```mkdir kafka```<br>
+```cd kafka```<br>
 ```tar -xvzf ~/Downloads/kafka.tgz --strip 1```<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/2_download_kafka.PNG" width="75%" height="75%"><br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/2_unzip_kafka.PNG" width="75%" height="75%"><br>
@@ -28,7 +30,7 @@
   - [PuTTY MSI (‘Windows Installer’)](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
   - Open the PuTTY Key Generator to load the Private Key<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/3_putty_ssh.PNG" width="60%" height="60%"><br>
-  - Conversion -> Export OpenSSH Key -> Then can save the Public Key somewhere
+  - Save the Public Key somewhere: Conversion -> Export OpenSSH Key
 ### 4) Accessing the VM via Visual Studio Code (VS Code)
 - Open VS Code on local machine.
 - Install the “Remote - SSH” extension.<br>
@@ -38,15 +40,17 @@
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_search_box.PNG" width="60%" height="60%"><br>
   - Edit SSH configuration (can get information from Azure VM Overview Page for Host: VM name, User name, HostName: VM IP address, IdentityFile: Public Key location)<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_config.PNG" width="60%" height="60%"><br>
-- Connect the VM<br>
+- Connect the VM via VS Code<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_vm_connect.PNG" width="60%" height="60%"><br>
-- After successful connection, can manipulate files in VS code Explorer<br>
+- After successful connection, can access and manipulate files in VM via VS code Explorer<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_connected_explorer.PNG" width="60%" height="60%"><br>
-### 5) Install Python and kafka-python package via VS code terminal:
+### 5) Install Python and kafka-python package in VM via VS code terminal:
 ```sudo apt install python3```<br>
 ```pip install kafka-python```<br>
 ### 6) Configuration in server.properties in the remote Kafka broker so that local computer consumer can connect from it
-- In the configuration file for each **broker**, need to adjust `advertised.listeners` and set it either to **DNS name** or **public IP address** of the server where broker is hosted.<br>
+- Go to 'config' folder of kafka location
+- In the configuration file for each broker, need to adjust `advertised.listeners` and set it either to DNS name or public IP address of the server where broker is hosted.<br>
+- Uncomment the line<br>
 Examples<br>
 ```advertised.listeners=PLAINTEXT://hostname:9092```<br>
 ```advertised.listeners=PLAINTEXT://176.11.12.1:9092```<br>
@@ -58,14 +62,14 @@ Examples<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/7_inbound_rule.PNG" width="75%" height="75%"><br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/7_inbound_rule_set_source_ip.PNG" width="75%" height="75%"><br>
 ### 8) Remote kafka-python producer Setup
-- Make sure Python package pybit (Bybit API) installed
+- Make sure Python package pybit (for Bybit API) installed
 - Write a Python script that interacts with the Bybit API to retrieve crypto data.
-- This script will act as Kafka producer, publishing crypto data to a Kafka topic.<br>
+- This script will also act as Kafka producer, publishing crypto data to a Kafka topic, i.e. 'BTCUSDT-1min'.<br>
 [producer_kline.py](https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/producer_kline.py)<br>
 ### 9) Local Consumer Setup
 - Install the kafka-python library locally.
 - On the local computer, set up a Kafka consumer.
-- Consume data from the same Kafka topic (“crypto-data-topic”) to receive the streaming data.<br>
+- Consume data from the same Kafka topic ('BTCUSDT-1min') to receive the streaming data.<br>
 [consumer.py](https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/consumer.py)<br>
 ### 10) Running the Demo
 - start zookeeper first, then Kafka broker on Azure VM<br>
