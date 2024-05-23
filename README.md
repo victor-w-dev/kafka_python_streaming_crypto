@@ -13,7 +13,7 @@ Table of contents
 [3. SSH Public Key Setup](#SSH-Public-Key-Setup)<br>
 [4. Accessing the VM via Visual Studio Code](#Accessing-the-VM-via-Visual-Studio-Code)<br>
 [5. Install Python and kafka-python package in VM via VS code terminal](#Install-Python-and-kafka-python-package-in-VM-via-VS-code-terminal)<br>    
-[6. Configuration in server.properties in the remote Kafka broker](#Configuration-in-server-properties-in-the-remote-Kafka-broker)<br>  
+[6. Configuration in server properties in the remote Kafka broker](#Configuration-in-server-properties-in-the-remote-Kafka-broker)<br>  
 [7. Set up Inbound Port Rule in remote VM Network settings](#Set-up-Inbound-Port-Rule-in-remote-VM-Network-settings)<br>  
 
 <!--te-->
