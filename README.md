@@ -12,10 +12,29 @@ Table of contents
 [2. Install Kafka on the VM](#Install-Kafka-on-the-VM)<br>
 [3. SSH Public Key Setup](#SSH-Public-Key-Setup)<br>
 [4. Accessing the VM via Visual Studio Code](#Accessing-the-VM-via-Visual-Studio-Code)<br>
-[5. Install Python and kafka-python package in VM via VS code](#Install-Python-and-kafka-python-package-in-VM-via-VS-code-terminal)
-[6. Configuration in server properties in the remote Kafka broker](#Configuration-in-server-properties-in-the-remote-Kafka-broker)
-[7. Set up Inbound Port Rule in remote VM Network settings](#Set-up-Inbound-Port-Rule-in-remote-VM-Network-settings)
+[5. Install Python and kafka-python package in VM via VS code](#Install-Python-and-kafka-python-package-in-VM-via-VS-code-terminal)<br>
+[6. Configuration in server properties in the remote Kafka broker](#Configuration-in-server-properties-in-the-remote-Kafka-broker)<br>
+[7. Set up Inbound Port Rule in remote VM Network settings](#Set-up-Inbound-Port-Rule-in-remote-VM-Network-settings)<br>
+[8. Remote kafka-python producer Setup](#Remote-kafka-python-producer-Setup<br>
+[9. Local Consumer Setup](#Local-Consumer-Setup)<br>
+[10. Running the Demo](#Running-the-Demo)<br>
 
+
+ 
+Remote kafka-python producer Setup
+============
+- Make sure Python package pybit (for Bybit API) installed
+- Write a Python script that interacts with the Bybit API to retrieve crypto data.
+- This script will also act as Kafka producer, publishing crypto data to a Kafka topic, i.e. 'BTCUSDT-1min'.<br>
+[producer_kline.py](https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/producer_kline.py)<br>
+
+### 9) Local Consumer Setup
+============
+- Install the kafka-python library locally.
+- On the local computer, set up a Kafka consumer.
+- Consume data from the same Kafka topic ('BTCUSDT-1min') to receive the streaming data.<br>
+[consumer.py](https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/consumer.py)<br>
+### 10) Running the Demo
 <!--te-->
 
 Setting up a remote Kafka Linux server
@@ -95,17 +114,22 @@ Set up Inbound Port Rule in remote VM Network settings
 - Make sure to include both the local consumer IP and this Azure VM IP for Source IP addresses in the Inbound Port Rule<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/7_inbound_rule.PNG" width="75%" height="75%"><br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/7_inbound_rule_set_source_ip.PNG" width="75%" height="75%"><br>
-### 8) Remote kafka-python producer Setup
+  
+Remote kafka-python producer Setup
+============
 - Make sure Python package pybit (for Bybit API) installed
 - Write a Python script that interacts with the Bybit API to retrieve crypto data.
 - This script will also act as Kafka producer, publishing crypto data to a Kafka topic, i.e. 'BTCUSDT-1min'.<br>
 [producer_kline.py](https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/producer_kline.py)<br>
+
 ### 9) Local Consumer Setup
+============
 - Install the kafka-python library locally.
 - On the local computer, set up a Kafka consumer.
 - Consume data from the same Kafka topic ('BTCUSDT-1min') to receive the streaming data.<br>
 [consumer.py](https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/consumer.py)<br>
 ### 10) Running the Demo
+============
 - start zookeeper first, then Kafka broker on Azure VM<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/10_start_zookeeper_kafka_server.PNG" width="75%" height="75%"><br>
 - Start the Kafka producer script on Azure VM
