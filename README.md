@@ -8,14 +8,14 @@ Table of contents
 =================
 
 <!--ts-->
-[1. Setting up a remote Kafka Linux server](#setting-up-a-remote-kafka-linux-server)<br>
-[2. Install Kafka on the VM](#install-kafka-on-the-vm)<br>
+[1. Setting up a remote Kafka Linux server](#1.-Setting-up-a-remote-Kafka-Linux-server)<br>
+[2. Install Kafka on the VM](#Install-Kafka-on-the-VM)<br>
 [3. SSH Public Key Setup](#SSH-Public-Key-Setup)<br>
      
   
 <!--te-->
 
-Setting up a remote Kafka Linux server
+1. Setting up a remote Kafka Linux server
 ============
 - Create an Azure Virtual Machine (VM) with Ubuntu Linux.<br>
   Use Linux (ubuntu 22.04) and Standard B2s (2 vcpus, 4 GiB memory)<br>
