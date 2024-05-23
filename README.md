@@ -8,7 +8,7 @@ Table of contents
 =================
 
 <!--ts-->
-   * [1) Setting up a remote Kafka Linux server](#Setting-up-a-remote-Kafka-Linux-server)
+   * [1) Setting up a remote Kafka Linux server](#setting-up-a-remote-kafka-linux-server)
    * [Usage](#usage)
       * [STDIN](#stdin)
       * [Local files](#local-files)
@@ -34,8 +34,10 @@ Table of contents
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/1_powershell.png" width="75%" height="75%"><br>
 ### 2) Install Kafka on the VM
 - Update the package in Linux and install Java Development Kit OpenJDK 11<br>
-```sudo apt-get update```<br>
-```sudo apt install openjdk-11-jdk```<br>
+```bash
+sudo apt-get update
+sudo apt install openjdk-11-jdk
+```
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/2_install_java.PNG" width="75%" height="75%"><br>
 - Download and Install Kafka 2.4.0<br>
 ```mkdir Downloads```<br>
