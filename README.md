@@ -74,7 +74,7 @@ Accessing the VM via Visual Studio Code
 
 Install Python and kafka-python package in VM via VS code
 ============
-- in VS code terminal: 
+- In VS code terminal: 
 ```bash
 $ sudo apt install python3
 $ pip install kafka-python
@@ -114,7 +114,7 @@ Local Consumer Setup
 
 Running the Demo
 ============
-- start zookeeper first, then Kafka broker on Azure VM<br>
+- Start zookeeper first, then Kafka broker on Azure VM<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/10_start_zookeeper_kafka_server.PNG" width="75%" height="75%"><br>
 - Start the Kafka producer script on Azure VM
 - Observe the data being published to the Kafka topic.<br>
