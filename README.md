@@ -8,14 +8,11 @@ Table of contents
 =================
 
 <!--ts-->
-[1. Setting up a remote Kafka Linux server](#setting-up-a-remote-kafka-linux-server)
-[2. Install Kafka on the VM](#install-kafka-on-the-vm)
-      
-   * [Tests](#tests)
-   * [Dependency](#dependency)
-   * [Docker](#docker)
-     * [Local](#local)
-     * [Public](#public)
+[1. Setting up a remote Kafka Linux server](#setting-up-a-remote-kafka-linux-server)<br>
+[2. Install Kafka on the VM](#install-kafka-on-the-vm)<br>
+[3. SSH Public Key Setup](#SSH-Public-Key-Setup)<br>
+     
+  
 <!--te-->
 
 Setting up a remote Kafka Linux server
@@ -46,7 +43,9 @@ $ tar -xvzf ~/Downloads/kafka.tgz --strip 1
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/2_download_kafka.PNG" width="75%" height="75%"><br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/2_unzip_kafka.PNG" width="75%" height="75%"><br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/2_install_kafka_completed.PNG" width="75%" height="75%"><br>
-### 3) SSH Public Key Setup
+  
+SSH Public Key Setup
+============
 - Generate an SSH key (Public key) using PuTTY.
   - [PuTTY MSI (‘Windows Installer’)](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
   - Open the PuTTY Key Generator to load the Private Key<br>
