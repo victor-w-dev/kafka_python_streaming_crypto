@@ -12,7 +12,7 @@ Table of contents
 [2. Install Kafka on the VM](#Install-Kafka-on-the-VM)<br>
 [3. SSH Public Key Setup](#SSH-Public-Key-Setup)<br>
 [4. Accessing the VM via Visual Studio Code](#Accessing-the-VM-via-Visual-Studio-Code)<br>
-[5. Install Python and kafka-python package in VM via VS code terminal](#Install-Python-and-kafka-python-package-in-VM-via-VS-code-terminal)<br>    
+[5. Install Python and kafka-python package in VM via VS code](#Install-Python-and-kafka-python-package-in-VM-via-VS-code-terminal)<br>    
 [6. Configuration in server properties in the remote Kafka broker](#Configuration-in-server-properties-in-the-remote-Kafka-broker)<br>  
 [7. Set up Inbound Port Rule in remote VM Network settings](#Set-up-Inbound-Port-Rule-in-remote-VM-Network-settings)<br>  
 
@@ -70,8 +70,9 @@ Accessing the VM via Visual Studio Code
 - After successful connection, can access and manipulate files in VM via VS code Explorer<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_connected_explorer.PNG" width="60%" height="60%"><br>
 
-Install Python and kafka-python package in VM via VS code terminal
+Install Python and kafka-python package in VM via VS code
 ============
+- in VS code terminal: 
 ```bash
 $ sudo apt install python3
 $ pip install kafka-python
