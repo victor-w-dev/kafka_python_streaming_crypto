@@ -26,6 +26,7 @@ Setting up a remote Kafka Linux server
 - Connect from local machine (Windows) PowerShell using SSH Private Key file provided by Azure
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/1_access_vm.png" width="75%" height="75%"><br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/1_powershell.png" width="75%" height="75%"><br>
+  
 Install Kafka on the VM
 ============
 - Update the package in Linux and install Java Development Kit OpenJDK 11<br>
