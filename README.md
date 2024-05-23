@@ -84,10 +84,10 @@ Configuration in server properties in the remote Kafka broker
 ============
 - Go to 'config' folder of kafka location
 - In the server.properties configuration file for each broker, need to adjust `advertised.listeners` and set it either to DNS name or public IP address of the server where broker is hosted.<br>
-- Uncomment the line<br>
 Examples<br>
 ```advertised.listeners=PLAINTEXT://hostname:9092```<br>
 ```advertised.listeners=PLAINTEXT://176.11.12.1:9092```<br>
+- Uncomment the line<br>
 - Here, just a single broker to demo<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/6_server_properties.PNG" width="75%" height="75%"><br>
 
