@@ -11,7 +11,7 @@ Table of contents
 [1. Setting up a remote Kafka Linux server](#Setting-up-a-remote-Kafka-Linux-server)<br>
 [2. Install Kafka on the VM](#Install-Kafka-on-the-VM)<br>
 [3. SSH Public Key Setup](#SSH-Public-Key-Setup)<br>
-[4. Accessing the VM via Visual Studio Code (VS Code)](#Accessing-the-VM-via-Visual-Studio-Code-(VS-Code))<br>
+[4. Accessing the VM via Visual Studio Code (VS Code)](#Accessing-the-VM-via-Visual-Studio-Code)<br>
      
   
 <!--te-->
@@ -53,7 +53,7 @@ SSH Public Key Setup
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/3_putty_ssh.PNG" width="60%" height="60%"><br>
   - Save the Public Key somewhere: Conversion -> Export OpenSSH Key
 
-Accessing the VM via Visual Studio Code (VS Code)
+Accessing the VM via Visual Studio Code
 ============
 - Open VS Code on local machine.
 - Install the “Remote - SSH” extension.<br>
