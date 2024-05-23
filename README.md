@@ -13,7 +13,7 @@ Table of contents
 [3. SSH Public Key Setup](#SSH-Public-Key-Setup)<br>
 [4. Accessing the VM via Visual Studio Code](#Accessing-the-VM-via-Visual-Studio-Code)<br>
 [5. Install Python and kafka-python package in VM via VS code terminal](#Install-Python-and-kafka-python-package-in-VM-via-VS-code-terminal)<br>    
-[6. Configuration in server.properties in the remote Kafka broker so that local computer consumer can connect from it](#Configuration-in-server.properties-in-the-remote-Kafka-broker-so-that-local-computer-consumer-can-connect-from-it)<br>  
+[6. Configuration in server.properties in the remote Kafka broker](#Configuration-in-server.properties-in-the-remote-Kafka-broker)<br>  
 <!--te-->
 
 Setting up a remote Kafka Linux server
