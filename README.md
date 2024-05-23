@@ -11,9 +11,9 @@ Table of contents
 [1. Setting up a remote Kafka Linux server](#Setting-up-a-remote-Kafka-Linux-server)<br>
 [2. Install Kafka on the VM](#Install-Kafka-on-the-VM)<br>
 [3. SSH Public Key Setup](#SSH-Public-Key-Setup)<br>
-[4. Accessing the VM via Visual Studio Code (VS Code)](#Accessing-the-VM-via-Visual-Studio-Code)<br>
-     
-  
+[4. Accessing the VM via Visual Studio Code](#Accessing-the-VM-via-Visual-Studio-Code)<br>
+[5. Install Python and kafka-python package in VM via VS code terminal](#Install-Python-and-kafka-python-package-in-VM-via-VS-code-terminal)<br>    
+[6. Configuration in server.properties in the remote Kafka broker so that local computer consumer can connect from it](#Configuration-in-server.properties-in-the-remote-Kafka-broker-so-that-local-computer-consumer-can-connect-from-it)<br>  
 <!--te-->
 
 Setting up a remote Kafka Linux server
@@ -67,12 +67,15 @@ Accessing the VM via Visual Studio Code
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_vm_connect.PNG" width="60%" height="60%"><br>
 - After successful connection, can access and manipulate files in VM via VS code Explorer<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_connected_explorer.PNG" width="60%" height="60%"><br>
-### 5) Install Python and kafka-python package in VM via VS code terminal:
+
+Install Python and kafka-python package in VM via VS code terminal
+============
 ```bash
 $ sudo apt install python3
 $ pip install kafka-python
 ```
-### 6) Configuration in server.properties in the remote Kafka broker so that local computer consumer can connect from it
+Configuration in server.properties in the remote Kafka broker so that local computer consumer can connect from it
+============
 - Go to 'config' folder of kafka location
 - In the configuration file for each broker, need to adjust `advertised.listeners` and set it either to DNS name or public IP address of the server where broker is hosted.<br>
 - Uncomment the line<br>
