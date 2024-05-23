@@ -13,7 +13,7 @@ Table of contents
 [3. SSH Public Key Setup](#SSH-Public-Key-Setup)<br>
 [4. Accessing the VM via Visual Studio Code](#Accessing-the-VM-via-Visual-Studio-Code)<br>
 [5. Install Python and kafka-python package in VM via VS code terminal](#Install-Python-and-kafka-python-package-in-VM-via-VS-code-terminal)<br>    
-[6. Configuration in server.properties in the remote Kafka broker](#Configuration-in-server.properties-in-the-remote-Kafka-broker)<br>  
+[6. Configuration in server.properties in the remote Kafka broker](#Configuration-in-server-properties-in-the-remote-Kafka-broker)<br>  
 [7. Set up Inbound Port Rule in remote VM Network settings](#Set-up-Inbound-Port-Rule-in-remote-VM-Network-settings)<br>  
 
 <!--te-->
@@ -77,10 +77,10 @@ $ sudo apt install python3
 $ pip install kafka-python
 ```
 
-Configuration in server.properties in the remote Kafka broker
+Configuration in server properties in the remote Kafka broker
 ============
 - Go to 'config' folder of kafka location
-- In the configuration file for each broker, need to adjust `advertised.listeners` and set it either to DNS name or public IP address of the server where broker is hosted.<br>
+- In the server.properties configuration file for each broker, need to adjust `advertised.listeners` and set it either to DNS name or public IP address of the server where broker is hosted.<br>
 - Uncomment the line<br>
 Examples<br>
 ```advertised.listeners=PLAINTEXT://hostname:9092```<br>
