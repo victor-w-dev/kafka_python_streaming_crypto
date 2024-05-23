@@ -14,6 +14,8 @@ Table of contents
 [4. Accessing the VM via Visual Studio Code](#Accessing-the-VM-via-Visual-Studio-Code)<br>
 [5. Install Python and kafka-python package in VM via VS code terminal](#Install-Python-and-kafka-python-package-in-VM-via-VS-code-terminal)<br>    
 [6. Configuration in server.properties in the remote Kafka broker](#Configuration-in-server.properties-in-the-remote-Kafka-broker)<br>  
+[7. Set up Inbound Port Rule in remote VM Network settings](#Set-up-Inbound-Port-Rule-in-remote-VM-Network-settings)<br>  
+
 <!--te-->
 
 Setting up a remote Kafka Linux server
@@ -74,6 +76,7 @@ Install Python and kafka-python package in VM via VS code terminal
 $ sudo apt install python3
 $ pip install kafka-python
 ```
+
 Configuration in server.properties in the remote Kafka broker
 ============
 - Go to 'config' folder of kafka location
@@ -84,7 +87,9 @@ Examples<br>
 ```advertised.listeners=PLAINTEXT://176.11.12.1:9092```<br>
 - Here, just a single broker to demo<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/6_server_properties.PNG" width="75%" height="75%"><br>
-### 7) Set up Inbound Port Rule in remote VM Network settings
+
+Set up Inbound Port Rule in remote VM Network settings
+============
 - Allow local consumer to interact with remote VM Kafka broker (single broker default port: 9092), consuming the crypto data
 - Make sure to include both the local consumer IP and this Azure VM IP for Source IP addresses in the Inbound Port Rule<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/7_inbound_rule.PNG" width="75%" height="75%"><br>
