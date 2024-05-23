@@ -74,7 +74,7 @@ Install Python and kafka-python package in VM via VS code terminal
 $ sudo apt install python3
 $ pip install kafka-python
 ```
-Configuration in server.properties in the remote Kafka broker so that local computer consumer can connect from it
+Configuration in server.properties in the remote Kafka broker
 ============
 - Go to 'config' folder of kafka location
 - In the configuration file for each broker, need to adjust `advertised.listeners` and set it either to DNS name or public IP address of the server where broker is hosted.<br>
