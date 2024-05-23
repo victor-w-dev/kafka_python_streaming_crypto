@@ -8,8 +8,8 @@ Table of contents
 =================
 
 <!--ts-->
-   * [1. Setting up a remote Kafka Linux server](#setting-up-a-remote-kafka-linux-server)
-   * [2. Install Kafka on the VM](#install-kafka-on-the-vm)
+[1. Setting up a remote Kafka Linux server](#setting-up-a-remote-kafka-linux-server)
+[2. Install Kafka on the VM](#install-kafka-on-the-vm)
       
    * [Tests](#tests)
    * [Dependency](#dependency)
