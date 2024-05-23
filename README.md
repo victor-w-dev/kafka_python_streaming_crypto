@@ -8,7 +8,7 @@ Table of contents
 =================
 
 <!--ts-->
-   * [Installation](#1) Setting up a remote Kafka Linux server)
+   * [1) Setting up a remote Kafka Linux server](#Setting-up-a-remote-Kafka-Linux-server)
    * [Usage](#usage)
       * [STDIN](#stdin)
       * [Local files](#local-files)
