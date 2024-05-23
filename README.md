@@ -9,15 +9,8 @@ Table of contents
 
 <!--ts-->
    * [1. Setting up a remote Kafka Linux server](#setting-up-a-remote-kafka-linux-server)
-   * [Usage](#usage)
-      * [STDIN](#stdin)
-      * [Local files](#local-files)
-      * [Remote files](#remote-files)
-      * [Multiple files](#multiple-files)
-      * [Combo](#combo)
-      * [Auto insert and update TOC](#auto-insert-and-update-toc)
-      * [GitHub token](#github-token)
-      * [TOC generation with Github Actions](#toc-generation-with-github-actions)
+   * [2. Install Kafka on the VM](#Install Kafka on the VM)
+      
    * [Tests](#tests)
    * [Dependency](#dependency)
    * [Docker](#docker)
@@ -33,7 +26,8 @@ Setting up a remote Kafka Linux server
 - Connect from local machine (Windows) PowerShell using SSH Private Key file provided by Azure
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/1_access_vm.png" width="75%" height="75%"><br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/1_powershell.png" width="75%" height="75%"><br>
-### 2) Install Kafka on the VM
+Install Kafka on the VM
+============
 - Update the package in Linux and install Java Development Kit OpenJDK 11<br>
 ```bash
 $ sudo apt-get update
