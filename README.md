@@ -35,16 +35,18 @@ Table of contents
 ### 2) Install Kafka on the VM
 - Update the package in Linux and install Java Development Kit OpenJDK 11<br>
 ```bash
-sudo apt-get update
-sudo apt install openjdk-11-jdk
+$ sudo apt-get update
+$ sudo apt install openjdk-11-jdk
 ```
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/2_install_java.PNG" width="75%" height="75%"><br>
 - Download and Install Kafka 2.4.0<br>
-```mkdir Downloads```<br>
-```curl https://archive.apache.org/dist/kafka/2.4.0/kafka_2.13-2.4.0.tgz -o Downloads/kafka.tgz```<br>
-```mkdir kafka```<br>
-```cd kafka```<br>
-```tar -xvzf ~/Downloads/kafka.tgz --strip 1```<br>
+```bash
+$ mkdir Downloads
+$ curl https://archive.apache.org/dist/kafka/2.4.0/kafka_2.13-2.4.0.tgz -o Downloads/kafka.tgz
+$ mkdir kafka
+$ cd kafka
+$ tar -xvzf ~/Downloads/kafka.tgz --strip 1
+```
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/2_download_kafka.PNG" width="75%" height="75%"><br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/2_unzip_kafka.PNG" width="75%" height="75%"><br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/2_install_kafka_completed.PNG" width="75%" height="75%"><br>
@@ -68,8 +70,10 @@ sudo apt install openjdk-11-jdk
 - After successful connection, can access and manipulate files in VM via VS code Explorer<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_connected_explorer.PNG" width="60%" height="60%"><br>
 ### 5) Install Python and kafka-python package in VM via VS code terminal:
-```sudo apt install python3```<br>
-```pip install kafka-python```<br>
+```bash
+$ sudo apt install python3
+$ pip install kafka-python
+```
 ### 6) Configuration in server.properties in the remote Kafka broker so that local computer consumer can connect from it
 - Go to 'config' folder of kafka location
 - In the configuration file for each broker, need to adjust `advertised.listeners` and set it either to DNS name or public IP address of the server where broker is hosted.<br>
