@@ -1,4 +1,4 @@
-# kafka_python_streaming_crypto
+# kakfa-python Azure VM Ubuntu cryptocurrency streaming
 - A demo to demonstrate how to set up a remote Kafka-based data streaming workflow for collecting and processing cryptocurrency data (e.g. Bitcoin USDT perpetual contract data) using Python kafka-python package and Bybit API.
 - A Kafka producer collects the data and publishes to the Kafka Broker in the same remote Azure VM with a topic (e.g. 'BTCUSDT-1min').
 - A consumer in local computer receives the data and then can have further transformation for triggering a trading strategy.
