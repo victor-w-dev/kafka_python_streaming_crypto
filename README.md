@@ -48,16 +48,8 @@ $ tar -xvzf ~/Downloads/kafka.tgz --strip 1
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/2_download_kafka.PNG" width="75%" height="75%"><br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/2_unzip_kafka.PNG" width="75%" height="75%"><br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/2_install_kafka_completed.PNG" width="75%" height="75%"><br>
-  
-SSH Public Key Setup
-============
-- Generate an SSH key (Public key) using PuTTY.
-  - [PuTTY MSI (‘Windows Installer’)](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
-  - Open the PuTTY Key Generator to load the Private Key<br>
-  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/3_putty_ssh.PNG" width="60%" height="60%"><br>
-  - Save the Public Key somewhere: Conversion -> Export OpenSSH Key
 
-Accessing the VM via Visual Studio Code
+Accessing the VM via Visual Studio Code using .pem File from Azure (VM private key)
 ============
 - Open VS Code on local machine.
 - Install the “Remote - SSH” extension.<br>
@@ -65,8 +57,8 @@ Accessing the VM via Visual Studio Code
 - Use the SSH configuration to connect the Azure VM from VS Code.<br>
   - Press F1 to search "Remote-SSH: Open SSH Configuration File..."<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_search_box.PNG" width="60%" height="60%"><br>
-  - Edit SSH configuration (can get information from Azure VM Overview Page for Host: VM name, User name, HostName: VM IP address, IdentityFile: Public Key location)<br>
-  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_config.PNG" width="60%" height="60%"><br>
+  - Edit SSH configuration (can get information from Azure VM Overview Page for Host: VM name, User name, HostName: VM IP address, Port, IdentityFile: Private Key location)<br>
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_config2.PNG" width="60%" height="60%"><br>
 - Connect the VM via VS Code<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/4_vm_connect.PNG" width="60%" height="60%"><br>
 - After successful connection, can access and manipulate files in VM via VS code Explorer<br>
