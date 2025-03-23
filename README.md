@@ -96,8 +96,7 @@ Set up Inbound Port Rule in remote VM Network settings
 ============
 - Allow local consumer to interact with remote VM Kafka broker (single broker default port: 9092), consuming the crypto data
 - Make sure to include both the local consumer IP and this Azure VM IP for Source IP addresses in the Inbound Port Rule<br>
-  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/7_inbound_rule.PNG" width="75%" height="75%"><br>
-  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/7_inbound_rule_set_source_ip.PNG" width="75%" height="75%"><br>
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/7_inbound_rule2.PNG" width="75%" height="75%"><br>
   
 Remote kafka-python producer Setup
 ============
