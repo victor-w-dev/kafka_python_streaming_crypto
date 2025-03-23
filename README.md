@@ -10,14 +10,13 @@ Table of contents
 <!--ts-->
 [1. Setting up a remote Kafka Linux server](#Setting-up-a-remote-Kafka-Linux-server)<br>
 [2. Install Kafka on the VM](#Install-Kafka-on-the-VM)<br>
-[3. SSH Public Key Setup](#SSH-Public-Key-Setup)<br>
-[4. Accessing the VM via Visual Studio Code](#Accessing-the-VM-via-Visual-Studio-Code)<br>
-[5. Install Python and kafka-python package in VM via VS code](#Install-Python-and-kafka-python-package-in-VM-via-VS-code)<br>
-[6. Configuration in server properties in the remote Kafka broker](#Configuration-in-server-properties-in-the-remote-Kafka-broker)<br>
-[7. Set up Inbound Port Rule in remote VM Network settings](#Set-up-Inbound-Port-Rule-in-remote-VM-Network-settings)<br>
-[8. Remote kafka-python producer Setup](#Remote-kafka-python-producer-Setup)<br>
-[9. Local Consumer Setup](#Local-Consumer-Setup)<br>
-[10. Running the Demo](#Running-the-Demo)<br>
+[3. Accessing the VM via Visual Studio Code using private key from Azure VM](#Accessing-the-VM-via-Visual-Studio-Code-using-private-key-from-Azure-VM)<br>
+[4. Install Python and kafka-python package in VM via VS code](#Install-Python-and-kafka-python-package-in-VM-via-VS-code)<br>
+[5. Configuration in server properties in the remote Kafka broker](#Configuration-in-server-properties-in-the-remote-Kafka-broker)<br>
+[6. Set up Inbound Port Rule in remote VM Network settings](#Set-up-Inbound-Port-Rule-in-remote-VM-Network-settings)<br>
+[7. Remote kafka-python producer Setup](#Remote-kafka-python-producer-Setup)<br>
+[8. Local Consumer Setup](#Local-Consumer-Setup)<br>
+[9. Running the Demo](#Running-the-Demo)<br>
 <!--te-->
 
 Setting up a remote Kafka Linux server
@@ -49,7 +48,7 @@ $ tar -xvzf ~/Downloads/kafka.tgz --strip 1
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/2_unzip_kafka.PNG" width="75%" height="75%"><br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/2_install_kafka_completed.PNG" width="75%" height="75%"><br>
 
-Accessing the VM via Visual Studio Code using .pem File from Azure (VM private key)
+Accessing the VM via Visual Studio Code using private key from Azure VM
 ============
 - Open VS Code on local machine.
 - Install the “Remote - SSH” extension.<br>
@@ -86,8 +85,8 @@ Examples<br>
 
 Set up Inbound Port Rule in remote VM Network settings
 ============
-- Allow local consumer to interact with remote VM Kafka broker (single broker default port: 9092), consuming the crypto data
-- Make sure to include both the local consumer IP and this Azure VM IP for Source IP addresses in the Inbound Port Rule<br>
+- Allow local consumer to interact with remote VM Kafka broker (single broker default port: 9093), consuming the crypto data
+- Make sure to include the local consumer IP for Source IP addresses in the Inbound Port Rule<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/7_inbound_rule2.PNG" width="75%" height="75%"><br>
   
 Remote kafka-python producer Setup
