@@ -90,7 +90,7 @@ Examples<br>
 ```listener.security.protocol.map=PLAINTEXT:PLAINTEXT,EXTERNAL:PLAINTEXT```<br>
 - This setup enables a producer on the VM to send data to localhost:9092 and a consumer on a separate machine to fetch data frompublic IP address of the server:9093, with an Azure Network Security Group rule allowing inbound traffic to port 9093 from the consumer’s IP.
 - Here, just a single broker to demo<br>
-  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/6_server_properties.PNG" width="75%" height="75%"><br>
+  <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/6_server_properties2.PNG" width="75%" height="75%"><br>
 
 Set up Inbound Port Rule in remote VM Network settings
 ============
