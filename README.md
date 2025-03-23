@@ -83,11 +83,12 @@ $ pip install kafka-python
 Configuration in server properties in the remote Kafka broker
 ============
 - Go to 'config' folder of kafka location
-- In the server.properties configuration file for each broker, need to adjust `advertised.listeners` and set it either to DNS name or public IP address of the server where broker is hosted.<br>
+- In the server.properties configuration file for each broker, need to adjust `listeners`, `advertised.listeners` and set it either to DNS name or public IP address of the server where broker is hosted.<br>
 Examples<br>
-```advertised.listeners=PLAINTEXT://hostname:9092```<br>
-```advertised.listeners=PLAINTEXT://176.11.12.1:9092```<br>
-- Uncomment the line<br>
+```listeners=PLAINTEXT://localhost:9092,EXTERNAL://0.0.0.0:9093```<br>
+```advertised.listeners=PLAINTEXT://localhost:9092,EXTERNAL://public IP address of the server:9093```<br>
+```listener.security.protocol.map=PLAINTEXT:PLAINTEXT,EXTERNAL:PLAINTEXT```<br>
+- This setup enables a producer on the VM to send data to localhost:9092 and a consumer on a separate machine to fetch data frompublic IP address of the server:9093, with an Azure Network Security Group rule allowing inbound traffic to port 9093 from the consumer’s IP.
 - Here, just a single broker to demo<br>
   <img src="https://github.com/victor-w-dev/kafka_streaming_crypto/blob/main/img/6_server_properties.PNG" width="75%" height="75%"><br>
 
